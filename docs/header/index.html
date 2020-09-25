@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/normalize.css">
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+    .nav-wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: row;
+    position: relative;
+    width: 100%;
+    max-height: 100px;
+    background-color: white;
+    box-shadow: 0 0.1rem 0.1rem 0.1rem lightgray;
+    align-content: center;
+    justify-content: space-between;
+    padding-left:  5px;
+    padding-right:  5px;
+    }
+
+      .hamburger-icon  {
+     cursor: pointer;
+     justify-content: start;
+}
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+/* .img-link{
+
+    justify-self: end;
+    justify-items: flex-end;
+    justify-content: flex-end;
+    text-align: right;
+
+} */
+.logo-container{
+    text-align: right;
+    justify-self: end;
+    justify-items: flex-end;
+}
+
+#navLogo{
+    height: 100%;
+    width: auto;
+
+}
+
+
+.links-wrapper{
+    display: none;
+}
+    </style>
+</head>
+    <nav class="nav-wrapper">
+
+
+                <div class="hamburger-icon" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                  </div>
+                <!-- <div class="links-wrapper">
+                      
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="https://saltydog.com/shop/">
+                        STORES
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="https://saltydog.com/dine/">
+                        DINE
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="https://saltydog.com/daily-special/">
+                        SPECIALS
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="https://cruise.saltydog.com/">
+                        CRUISE
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="http://www.sbinn.com/">
+                        STAY
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="https://saltydog.com/map/">
+                        MAP
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="https://saltydog.com/employment/">
+                        CAREERS
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="https://events.saltydog.com/">
+                        EVENTS
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1"
+                        href="https://events.saltydog.com/kids-events/">
+                        KIDS
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="http://saltydogcafe.com/webcams/">
+                        WEBCAMS
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="https://saltydog.com/radio">
+                        RADIO
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="https://saltydog.com/videos">
+                        VIDEOS
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="http://bluewaterhhi.com/">
+                        FISH
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="https://saltydog.com/legend/">
+                        LEGEND
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="https://saltydog.com/photos/">
+                        PHOTOS
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="https://saltydog.com/h2o/">
+                        WEATHER
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="https://saltydog.com/contact/">
+                        CONTACT
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="https://saltydog.com/lucky/">
+                        RECEIPTS
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="https://saltydog.com/lucky8">
+                        LUCKY 8
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="https://saltydog.com/chat">
+                        CHAT
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="https://saltydog.com/social">
+                        SOCIAL
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="https://saltydog.com/tides/">
+                        MAGAZINE
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="https://saltydog.com/feedback/">
+                        FEEDBACK
+                    </a>
+                    <a class="accordion-toggle btn" data-parent="#accordion1" href="https://www.saltydogtshirt.com/">
+                        SHOP
+                    </a>
+                </div> -->
+                    <!-- <img src="https://saltydog.com/images/social-logos/SDHomepageICON.png"
+                            alt="Instagram Logo." /> -->
+                    
+                
+                            <div class="logo-container"><a class="img-link" href="https://saltydog.com/index.html">
+                            <img src="https://saltydog.com/images/social-logos/SDHomepageICON.png" id="navLogo" class="img-fluid"
+                            alt="Instagram Logo." />
+                            </a>
+                            </div>
+                        
+                
+     
+    </nav>
+    <script>
+        function myFunction(x) {
+  x.classList.toggle("change");
+}
+    </script>
+</body>
+</html>
