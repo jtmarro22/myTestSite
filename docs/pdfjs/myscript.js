@@ -3,7 +3,7 @@
 var url = './pdfs/sd-cafe-menu.pdf';
 
 // Loaded via <script> tag, create shortcut to access PDF.js exports.
-var pdfjsLib = window['./pdfjs-build/build/pdf'];
+// var pdfjsLib = window['pdfjs-build/build/pdf'];
 
 // The workerSrc property shall be specified.
 pdfjsLib.GlobalWorkerOptions.workerSrc = './pdfjs-build/build/pdf.worker.js';
