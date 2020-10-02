@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-9994729-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-9994729-1'), {
+            'optimize_id': 'GTM-N9XR6RG'
+        };
+    </script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>Salty Dog Receipts</title>
+    <!-- Modernizr -->
+
+    <!-- jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <!-- framework css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+        integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--<![endif]-->
+
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Quicksand" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="https://www.saltydog.com/headers/styleBoot.css">
+    <link type="text/css" rel="stylesheet" href="https://www.saltydog.com/headers/mega-header.css">
+
+    <style>
+
+    .content-container{
+        margin: 0 auto;
+        width: 99%;
+    }
+        .top-text h1{
+            font-size: 1.4rem;
+        }
+        .top-text h3{
+            font-size: 1rem;
+        }
+
+
+        .receipt-container {
+            background-color: #FEFFC4;
+            width:100%;
+       
+
+        }
+        thead {
+            font-size: 0.6rem;
+            background-color: #faefdb;
+            font-weight: 600;
+        }
+        tbody{
+            font-size: 0.5rem;
+            font-weight: 600;
+        }
+
+    
+    tbody tr:hover{
+        cursor: pointer;
+        color: red;
+        font-weight: bolder;
+    }
+
+    table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid rgb(41, 41, 41);
+  padding: 5px 4px;
+  
+}
+
+tr:nth-child(even) {
+    background-color: #fdfdd3;
+}
+
+tbody tr:hover{
+    background-color: rgba(128, 128, 128, 0.356);
+}
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <script>
+        $(document).ready(function () {
+            $("div[data-includeHTML]").each(function () {
+                $(this).load($(this).attr("data-includeHTML"));
+            });
+        });
+    </script>
+
+
+
+    <header>
+        <div data-includeHTML="https://www.saltydog.com/headers/_HeaderPartial.html"></div>
+    </header>
+    <br>
+    <br>
+    <br>
+
+<div class="content-container">
+    
+    
+            <div class="top-text text-center p-1">
+            <h1>Lucky Receipts</h1>
+            <h3>Receipt Numbers Are Posted On Tuesdays</h3>
+            <br>
+                 <h3>IF YOUR RECEIPT IS AN EXACT MATCH FOR ALL INFO:
+                    <br>(amount, receipt #, date, venue, crew member)
+                 <br>CLICK ON IT FOR FURTHER INSTRUCTIONS</h3>
+             </div>
+    
+         <br>
+         
+            
+                <div class="receipt-container mx-auto text-center">
+                    
+                        <div class="mx-auto" data-includeHTML="table.html"></div>
+                </div>
+       
+</div>
+
+
+    <br>
+    <footer>
+        <div data-includeHTML="https://saltydog.com/headers/footer.html"></div>
+    </footer>
+</body>
+
+</html>

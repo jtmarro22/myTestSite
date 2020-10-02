@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-9994729-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-9994729-1'), { 'optimize_id': 'GTM-N9XR6RG' };
+    </script>
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="android-chrome-256x256.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    <title>Salty Dog Radio</title>
+
+</head>
+
+
+
+<body>
+  
+    <style>
+        .container {
+            height: 550px;
+            width: 350px;
+            padding-left: 0;
+        }
+
+        .my-container {
+
+
+            background-image: url("radio5.png") !important;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* border: 5px solid rgb(167, 245, 232); */
+
+            height: 400px;
+            width: 300px;
+
+
+
+            margin: 0;
+            position: relative;
+            text-align: center;
+
+        }
+
+        .a {
+            padding: 100px;
+        }
+
+
+        /* h2 {
+
+            font-size: .9em;
+            font-family: 'Baloo Bhaina', cursive;
+        } */
+
+        body {
+            color: rgb(4, 4, 51);
+            background-color: #E3F4FA;
+
+        }
+        #myBtn{
+            font-size: larger;
+        }
+        #myBtn:hover{
+            cursor: pointer;
+        }
+        #myBtn2{
+           display: none;
+        }
+        .btn-secondary:hover{
+            cursor: pointer;
+        }
+        .btn-secondary {
+            background: white;
+
+            color: rgb(4, 4, 51);
+            white-space: normal !important;
+            font-size: 10px !important;
+            font-family: 'Baloo Bhaina', cursive;
+            text-transform: uppercase;
+            margin: 4px;
+            border: 1px solid rgb(4, 4, 51);
+            box-shadow: 3px 3px 3px black;
+
+        }
+    </style>
+    </head>
+
+
+
+    <body>
+
+        <div class="container justify-content-center">
+
+
+            <div class="my-container">
+
+
+
+                <div class="row">
+                    <div class="col" style="padding-top: 5px">
+
+                        <audio id="radioplayer" src="http://98.101.223.10:8011" autoplay="autoplay"></audio>
+                        <a href="#" onclick="document.getElementById('radioplayer').play()"><button type="button"
+                                class="btn btn-secondary btn-sm">PLAY!</button></a>
+                        <a href="#" onclick="document.getElementById('radioplayer').pause()"><button type="button"
+                                class="btn btn-secondary btn-sm">PAUSE!</button></a>
+                    </div>
+
+
+
+                </div>
+
+                <div class="row">
+                    <div class="col" style="padding-top: 5px">
+                        <input id="volume" name="volume" min="0" max="1" step="0.1" type="range"
+                            onchange="setVolume()" />
+                        <label for="volume" style="color: black!important">Volume</label>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+            <div class="row justify-content-center">
+                <div class="col justify-content-center" style="padding-top: 2px; text-align: center">
+                    <button class="btn-secondary btn-lg" id="myBtn">What is Playing?</button> 
+            
+                        <!-- <p><strong>What's Playing at Salty Dog Now!?</strong></p> -->
+                    <div id="myDiv2"></div>
+                    <div id="myDiv1"></div>
+                    <button class="btn-secondary btn-lg" id="myBtn2">Clear</button>
+
+                </div>
+            </div>
+
+
+
+            <script type="text/javascript">
+                function setVolume() {
+                    document.getElementById("radioplayer").volume
+                        = document.getElementById('volume').value;
+                }
+            </script>
+
+        </div>
+
+        </div>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+        <script>
+
+            let title = document.getElementById('myDiv2');
+            let artist = document.getElementById('myDiv1');
+
+            function insertData(data){
+                title.innerText = data.song;
+                artist.innerText = data.artist;
+                artist.style.display = 'block';
+                title.style.display = 'block';
+            }
+            
+            
+
+            setInterval(() => {
+            fetch("./getRadioData.php")
+
+            .then(fetch("./data.json")
+            .then(res => res.json())
+            .then(data => insertData(data)))
+            
+            }, 5000);
+        
+    
+            </script>
+    </body>
+
+</html>

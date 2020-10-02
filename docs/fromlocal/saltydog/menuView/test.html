@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Lunch Menu</title>
+    <link rel="stylesheet" href="/css/background2.css">
+    <style>
+    * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    }
+
+    body{
+        scroll-behavior: smooth;
+    }
+
+    .main-content{
+        width: 100%;
+        max-height: 100vh;
+        position: relative;
+        margin: 0 auto;
+    }
+        .center-content {
+            margin: 0 auto;
+        }
+
+
+        .center-text {
+            text-align: center;
+        }
+
+        .grid-container {
+            display: grid;
+            position: relative;
+            grid-template-columns: 1fr auto 1fr;
+            grid-template-rows: auto;
+            align-content: center;
+            justify-content: center;
+            vertical-align: middle;
+            align-items: center;
+            width: 100%;
+            height: auto;
+        }
+
+        .prev {
+            text-align: right;
+        }
+        .myButton{
+            display: inline-block;
+            position: relative;
+            margin-top: 2px;
+            font-style: none;
+            text-decoration: none;
+            padding: 10px;
+            font-weight: 600;
+            color:white;
+            background-color: rgb(30, 72, 150);
+            border:solid 1px inherit;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+        .myButton:hover{
+            background-color: rgba(30, 72, 150, 0.76)
+        }
+        .prev button,
+        .next button {
+            font-size: 30px;
+            font-weight: bold;
+            font-size-adjust: inherit;
+            padding: 0.5vw;
+            cursor: pointer;
+        }
+
+        .img-container {
+            text-align: center;
+        }
+
+        .fluid-img {
+            max-width: 100%;
+            max-height: 100vh;
+        }
+        @media screen and (min-width: 930px){
+            .main-content{
+                width:70%;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-content">
+    <div class="center-text">
+        <a class="myButton bigBtn" href="../cafe.html">Back to Cafe</a>
+        <br>
+        <a class="myButton" href="./saltydogcafelunchmenu2020web.pdf">View PDF</a>
+    </div>
+
+            <div class="grid-container">
+                <div class="prev">
+                    <button onclick="prevImg()">&lt;</button>
+                </div>
+                <div class="img-container">
+                    <img class="fluid-img" name="slide">
+                </div>
+                <div class="next">
+                    <button onclick="nextImg()">&gt;</button>
+                </div>
+            </div>
+    
+        </div>
+
+    <script src="slide.js">
+    </script>
+</body>
+
+</html>

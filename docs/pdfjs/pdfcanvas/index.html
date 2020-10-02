@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Viewer</title>
-    <script src="../pdfjs-build/build/pdf.js"></script>
-
-   <style>
-       #the-canvas {
-  border: 1px solid black;
-  direction: ltr;
-}
-   </style>
+  <meta charset="UTF-8">
+  <title>Previous/Next example</title>
+  <style>
+    .text-center{
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 
-<h1>PDF.js Previous/Next example</h1>
+<div id="wrapper" class="text-center">
+  <canvas id="the-canvas" style="border: 1px solid black; direction: ltr;"></canvas>
+</div>
 
 <div>
   <button id="prev">Previous</button>
@@ -23,8 +21,8 @@
   &nbsp; &nbsp;
   <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
 </div>
-
-<canvas id="the-canvas"></canvas>
+<h1>'Previous/Next' example</h1>
+<script src="../pdfjs-build/build/pdf.js"></script>
 <script src="./myscript.js"></script>
 </body>
 </html>
